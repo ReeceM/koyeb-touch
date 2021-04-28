@@ -23,3 +23,11 @@ jobs:
 
     - name: Test
       run: go test -v ./...
+
+    - name: Go Release Binaries
+      uses: wangyoucao577/go-release-action@v1.17
+      with:
+        # GITHUB_TOKEN for uploading releases to Github asserts.
+        github_token: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
+        # GOOS is the running programs operating system target: one of darwin, freebsd, linux, and so on.
+        goos: linux
