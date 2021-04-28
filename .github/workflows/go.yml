@@ -31,3 +31,13 @@ jobs:
         github_token: ${{ secrets.GO_RELEASER_GITHUB_TOKEN }}
         # GOOS is the running programs operating system target: one of darwin, freebsd, linux, and so on.
         goos: linux
+        # GOARCH is the running programs architecture target: one of 386, amd64, arm, s390x, and so on.
+        goarch: x86
+        # Specify another binary name if do not want to use repository basename
+        binary_name: koyeb-touch
+
+        md5sum: TRUE
+        # Publish `.sha256` along with artifacts.
+        sha256sum: TRUE
+        # Upload binaries to specified release page that indicated by Git tag.
+        release_tag: TRUE
