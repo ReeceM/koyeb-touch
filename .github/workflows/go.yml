@@ -24,7 +24,7 @@ jobs:
     - name: Test
       run: go test -v ./...
 
-    - name: Go Release Binaries
+    - name: Linux Binaries
       uses: wangyoucao577/go-release-action@v1.17
       with:
         # GITHUB_TOKEN for uploading releases to Github asserts.
@@ -32,7 +32,7 @@ jobs:
         # GOOS is the running programs operating system target: one of darwin, freebsd, linux, and so on.
         goos: linux
         # GOARCH is the running programs architecture target: one of 386, amd64, arm, s390x, and so on.
-        goarch: x86
+        goarch: amd64
         # Specify another binary name if do not want to use repository basename
         binary_name: koyeb-touch
 
