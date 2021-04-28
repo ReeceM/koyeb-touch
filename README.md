@@ -7,7 +7,7 @@
 To use this is a ci file, do the following
 
 ```bash
-VERSION='v0.0.2-alpha' # Get the latest tagged version
+VERSION='v1.0.0' # Get the latest tagged version
 tar xvf <(curl -sL https://github.com/ReeceM/koyeb-touch/releases/download/$VERSION/koyeb-touch-$VERSION-darwin-amd64.tar.gz)
 ```
 
