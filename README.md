@@ -4,20 +4,22 @@
 
 ## Usage
 
-To use this is a ci file, do the following
+To use this in a ci file, do the following
 
 ```bash
 VERSION='v1.0.0' # Get the latest tagged version
-tar xvf <(curl -sL https://github.com/ReeceM/koyeb-touch/releases/download/$VERSION/koyeb-touch-$VERSION-darwin-amd64.tar.gz)
+tar xvf <(curl -sL https://github.com/ReeceM/koyeb-touch/releases/download/$VERSION/koyeb-touch-$VERSION-linux-amd64.tar.gz)
 ```
 
 For GitLab it can be something like so:
 
-You need to add the following to your CI/CD pipeline settings as variables `KOYEB_API_TOKEN KOYEB_APP_NAME KOYEB_SERVICE_NAME`
-
+You need to add the following to your CI/CD pipeline settings as variables:
+|`KOYEB_API_TOKEN` | `KOYEB_APP_NAME` | `KOYEB_SERVICE_NAME`|
+| ---------------- | ---------------- | ------------------- | 
+| This is the API token created in Koyeb | The name of the app, you can get it in the URL or what you called it | The name of the service, usually `main` |
 ```yml
 variables:
-  VERSION: 'v0.0.2-alpha'
+  VERSION: 'v1.0.0'
 
 koyeb:
   stage: deploy
