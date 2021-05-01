@@ -164,7 +164,10 @@ func (k *KoyebApplication) touchRevision(service KoyebService) {
 		log.Fatalln(err)
 	}
 
-	body, _ := ioutil.ReadAll(res.Body)
+	if res.StatusCode == 200 {
+		fmt.Println("Completed Successfully")
+	}
+	// body, _ := ioutil.ReadAll(res.Body)
 
-	fmt.Println(string(body))
+	fmt.Println("Result is not determinate, please check Koyeb dashboard")
 }
